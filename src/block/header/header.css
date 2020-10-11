@@ -1,0 +1,17 @@
+@import url(./__logo/header__logo.css);
+@import url(./__main/header__main.css);
+@import url(./__sign-up/header__sign-up.css);
+@import url(./__nav-container/header__nav-container.css);
+
+.header {
+  margin: 0 auto;
+  border-bottom: 1px solid #c4c4c4;
+  padding: 8px 0 12px 0;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  max-width: 1440px;
+  align-items: baseline;
+  z-index: 3;
+}

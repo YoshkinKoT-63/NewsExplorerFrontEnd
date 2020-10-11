@@ -1,0 +1,9 @@
+.header__main {
+  font-family: Roboto;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+  padding: .7em 1.5em;
+}

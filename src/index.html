@@ -3,11 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>NewsExplorer</title>
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
+
 </head>
-<body>
-  <h1></h1>
+<body class="news-explorer">
+  <div class="page">
+    <header class="header">
+      <a href="./index.html" class="header__logo" title="главная страница">NewsExplorer</a>
+      <nav class="header__nav-container">
+        <a href="#" class="header__main">Главная</a>
+        <a href="#" class="header__sign-up">Авторизоваться</a>
+      </nav>
+    </header>
+    <main class="content">
+      <section class="search">
+        <div class="search__container">
+        <h1 class="search__tittle">Что творится в мире?</h1>
+        <p class="search__subtitle">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</p>
+        <form action="/" method="post" class="search__form">
+            <input class="search__input form__input" type="text" name="search" id="search-input" minlength="2" maxlength="30" placeholder="Введите тему новости" required>
+            <button class="search__button button" type="submit">Искать</button>
+        </form>
+      </div>
+      </section>
+      <section class="about">
+        <img src="<%=require('./images/image-03.png')%>" class="about__photo">
+        <div class="about__text-container">
+          <h2 class="about__title">Об авторе</h2>
+          <p class="about__text">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.</p>
+          <p class="about__text">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__copyright">&copy; 2020 Supersite, Powered by News API</div>
+      <nav class="footer__menu-links">
+        <ul class="footer__item-list">
+          <li class="footer__item"><a href="#" class="footer__link">Главная</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">Яндекс.Практикум</a></li>
+        </ul>
+      </nav>
+      <nav class="footer__social-links">
+        <ul class="footer__item-list">
+          <li class="footer__item"><a href="#" class="footer__social-link"><img src="<%=require('./images/gh_icon.svg')%>" alt="" class="footer__social-icon"></a></li>
+          <li class="footer__item"><a href="#" class="footer__social-link"><img src="<%=require('./images/fb_icon.svg')%>" alt="" class="footer__social-icon"></a></li>
+        </ul>
+      </nav>
+    </footer>
+
+  </div>
+
   <script src="<%= htmlWebpackPlugin.files.js %>"></script>
 </body>
 </html>
