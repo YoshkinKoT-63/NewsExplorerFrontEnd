@@ -1,0 +1,10 @@
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  margin: 0 auto;
+  position: relative;
+  max-width: 1440px;
+  align-items: baseline;
+  padding: 0 104px;
+}

@@ -2,8 +2,9 @@
   font-family: Roboto;
   color: #fff;
   text-decoration: none;
+  border-bottom: 3px solid;
   font-size: 18px;
   line-height: 24px;
   font-weight: 500;
-  padding: .7em 1.5em;
+  padding-bottom: 20px;
 }

@@ -1,9 +1,10 @@
 .header__logo {
   color: #fff;
   text-decoration: none;
-  margin-left: 104px;
+  font-family: RobotoSlab, Verdana, Arial, sans-serif;
+  font-style: normal;
   font-weight: bold;
   font-size: 20px;
   line-height: 24px;
-  letter-spacing: .07em;
+  margin: 0;
 }
