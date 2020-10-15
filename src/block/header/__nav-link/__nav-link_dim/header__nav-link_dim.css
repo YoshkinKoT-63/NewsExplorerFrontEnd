@@ -1,0 +1,8 @@
+.header__nav-link_dim {
+  color: #B6BCBF;
+  transition: color .1s linear;
+}
+
+.header__nav-link_dim:hover {
+  color: #fff;
+}

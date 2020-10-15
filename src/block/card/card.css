@@ -1,0 +1,19 @@
+@import url(./__notice/card__notice.css);
+@import url(./__button/card__button.css);
+@import url(./__image/card__image.css);
+@import url(./__date/card__date.css);
+@import url(./__tittle/card__tittle.css);
+@import url(./__text/card__text.css);
+@import url(./__source/card__source.css);
+@import url(./__article-container/card__article-container.css);
+@import url(./__hide/card_hide.css);
+@import url(./__button/_added/card__button_added.css);
+
+
+.card {
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 16px;
+  max-width: 400px;
+  position: relative;
+}

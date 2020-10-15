@@ -25,3 +25,10 @@
   font-weight: 900;
   src: url("./fonts/RobotoSlab-Bold.woff2") format("woff2");
 }
+
+@font-face {
+  font-family: 'SourceSansPro';
+  font-style:  normal;
+  font-weight: 400;
+  src: url("./fonts/sourcesanspro-regular.woff") format("woff");
+}

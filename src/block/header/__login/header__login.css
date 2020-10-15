@@ -1,0 +1,6 @@
+.header__login::after {
+  content: url(../../../images/Union.svg);
+  position: relative;
+  top: 3px;
+  margin-left: 10px;
+}

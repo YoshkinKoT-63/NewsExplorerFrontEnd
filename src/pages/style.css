@@ -7,6 +7,10 @@
 @import url(../block/page/page.css);
 @import url(../block/about/about.css);
 @import url(../block/footer/footer.css);
+@import url(../block/result/result.css);
+@import url(../block/card/card.css);
+@import url(../block/preloader/preloader.css);
+@import url(../block/no-result/no-result.css);
 
 body {
   background-color: #fff;

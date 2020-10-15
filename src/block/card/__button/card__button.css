@@ -1,0 +1,26 @@
+.card__button {
+  padding: 13px;
+  background: #FFF;
+  border-radius: 8px;
+  outline: none;
+
+  color: #000;
+  border-radius: 10px;
+  background-color: #fff;
+  margin: 0;
+  padding: 10px 13px;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  box-sizing: border-box;
+  border: none;
+}
+
+.card__button::after {
+  content: url(../../../images/Rectangle_8.svg);
+  opacity: .5;
+}
+
+.card__button:hover::after {
+  opacity: 1;
+}

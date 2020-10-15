@@ -13,8 +13,10 @@
       <div class="header__container">
       <a href="./index.html" class="header__logo" title="главная страница">NewsExplorer</a>
         <nav class="header__nav-container">
-          <a href="#" class="header__main">Главная</a>
-          <a href="#" class="header__sign-up">Авторизоваться</a>
+          <a href="#" class="header__main header__nav-link">Главная</a>
+          <a href="#" class="header__nav-link header__nav-link_dim header_hide">Сохранённые статьи</a>
+          <a href="#" class="header__sign-up header__nav-link header__nav-link_button">Авторизоваться</a>
+          <a href="#" class="header__login header__nav-link header__nav-link_button header_hide">Александр</a>
         </nav>
       </div>
     </header>
@@ -28,6 +30,66 @@
             <button class="search__button button" type="submit">Искать</button>
         </form>
       </div>
+      </section>
+
+      <section class="preloader">
+        <i class="preloader__circle"></i>
+        <h2 class="preloader__text">Идет поиск новостей...</h2>
+      </section>
+
+      <section class="no-result">
+        <img src="<%=require('./images/not-found_v1.svg')%>" alt="" class="no-result__image" />
+        <h2 class="no-result__tittle">Ничего не найдено</h2>
+        <p class="no-result__text">
+          К сожалению по вашему запросу ничего не найдено.
+        </p>
+      </section>
+
+      <section class="result">
+        <h2 class="result__tittle">Результаты поиска</h2>
+        <div class="result__cards-container">
+
+          <div class="card">
+            <p class="card__notice card_hide">Войдите, чтобы сохранять статьи</p>
+            <button class="card__button"></button>
+            <img src="<%=require('./images/image_08.png')%>" alt="" class="card__image">
+            <div class="card__article-container">
+              <div class="card__date">2 августа, 2019</div>
+              <h3 class="card__tittle">Национальное достояние – парки</h3>
+              <p class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+              <p class="card__source">Лента.ру</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <p class="card__notice">Войдите, чтобы сохранять статьи</p>
+            <button class="card__button"></button>
+            <img src="<%=require('./images/image_04.png')%>" alt="" class="card__image">
+            <div class="card__article-container">
+              <div class="card__date">2 августа, 2019</div>
+              <h3 class="card__tittle">Лесные огоньки: история одной фотографии</h3>
+              <p class="card__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного
+                из местных чудес природы.</p>
+              <p class="card__source">Медуза</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <p class="card__notice card_hide">Войдите, чтобы сохранять статьи</p>
+            <button class="card__button card__button_added"></button>
+            <img src="<%=require('./images/image_07.png')%>" alt="" class="card__image">
+            <div class="card__article-container">
+              <div class="card__date">2 августа, 2019</div>
+              <h3 class="card__tittle">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
+              <p class="card__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
+              <p class="card__source">Риа</p>
+            </div>
+          </div>
+
+        </div>
+
+        <button type="button" class="result__show-more">Показать еще</button>
+
       </section>
       <section class="about">
         <img src="<%=require('./images/image-03.png')%>" class="about__photo">
