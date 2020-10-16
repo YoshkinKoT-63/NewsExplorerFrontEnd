@@ -99,7 +99,63 @@
           <p class="about__text">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
         </div>
       </section>
+
+      <div class="popup popup_type_sign-in">
+        <div class="popup__content">
+          <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close">
+          <h3 class="popup__title">вход</h3>
+          <form class="popup__form" name="sign-in">
+              <label class="popup__label">email</label>
+              <input type="text" id="email" name="email" class="popup__input popup__input_type_email" placeholder="Введите почту" minlength="2" maxlength="30" required>
+              <span id="email-error" class="popup__error"></span>
+              <label class="popup__label">пароль</label>
+              <input type="password" id="password" name="password" class="popup__input popup__input_type_password" placeholder="Введите пароль" required>
+              <span id="password-error" class="popup__error"></span>
+              <button type="submit" class="button popup__button popup__button_inactive popup__button_sign-in">войти</button>
+              <p class="popup__form-button-text">
+                или
+                <button type="button" class="popup__form-button-link">зарегистрироваться</button>
+              </p>
+          </form>
+        </div>
+      </div>
+
+      <div class="popup popup_type_sign-up">
+        <div class="popup__content">
+          <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close">
+          <h3 class="popup__title">регистрация</h3>
+          <form class="popup__form" name="sign-up">
+              <label class="popup__label">email</label>
+              <input type="text" id="email" name="email" class="popup__input popup__input_type_email" placeholder="Введите почту" minlength="2" maxlength="30" required>
+              <span id="email-error" class="popup__error"></span>
+              <label class="popup__label">пароль</label>
+              <input type="password" id="password" name="password" class="popup__input popup__input_type_password" placeholder="Введите пароль" required>
+              <span id="password-error" class="popup__error"></span>
+
+              <label class="popup__label">имя</label>
+              <input type="text" id="name" name="name" class="popup__input popup__input_type_name" placeholder="Введите имя" minlength="2" maxlength="30" required>
+              <span id="name-error" class="popup__error"></span>
+
+              <button type="submit" class="button popup__button popup__button_inactive popup__button_sign-up">зарегистрироваться</button>
+              <p class="popup__form-button-text">
+                или
+                <button type="button" class="popup__form-button-link">войти</button>
+              </p>
+          </form>
+        </div>
+      </div>
+
+      <div class="popup popup_type_succes popup_is-opened">
+        <div class="popup__content">
+          <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close">
+          <h3 class="popup__title">пользователь успешно зарегистрирован!</h3>
+          <button type="button" class="popup__button_succes">войти</button>
+        </div>
+      </div>
+
     </main>
+
+
 
     <footer class="footer">
       <div class="footer__copyright">&copy; 2020 Supersite, Powered by News API</div>

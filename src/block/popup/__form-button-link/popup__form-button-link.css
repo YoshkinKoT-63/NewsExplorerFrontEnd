@@ -1,0 +1,13 @@
+.popup__form-button-link {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #2F71E5;
+  background-color: inherit;
+  border: none;
+  text-transform: capitalize;
+  padding: 0;
+}

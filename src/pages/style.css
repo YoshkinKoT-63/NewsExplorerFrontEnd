@@ -11,6 +11,7 @@
 @import url(../block/card/card.css);
 @import url(../block/preloader/preloader.css);
 @import url(../block/no-result/no-result.css);
+@import url(../block/popup/popup.css);
 
 body {
   background-color: #fff;
