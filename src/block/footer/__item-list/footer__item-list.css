@@ -5,3 +5,11 @@
   margin: 0;
   padding: 0;
 }
+
+@media (max-width: 500px) {
+  .footer__item-list {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 5em;
+  }
+}

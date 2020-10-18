@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NewsExplorer</title>
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
+  <link rel="icon" type="image/png" sizes="32x32" href="<%=require('./images/favicon.png')%>" />
 
 </head>
 <body class="news-explorer">
@@ -18,6 +19,7 @@
           <a href="#" class="header__sign-up header__nav-link header__nav-link_button">Авторизоваться</a>
           <a href="#" class="header__login header__nav-link header__nav-link_button header_hide">Александр</a>
         </nav>
+        <button type="button" class="header__button"></button>
       </div>
     </header>
     <main class="content">
@@ -92,7 +94,11 @@
 
       </section>
       <section class="about">
-        <img src="<%=require('./images/image-03.png')%>" class="about__photo">
+        <picture>
+          <source media="(max-width: 321px)" srcset="<%=require('./images/author_image_320.png')%>"/>
+          <source media="(max-width: 767px)" srcset="<%=require('./images/author_image_768.png')%>"/>
+          <img src="<%=require('./images/author_image_full.png')%>" alt="" class="about__photo"/>
+        </picture>
         <div class="about__text-container">
           <h2 class="about__title">Об авторе</h2>
           <p class="about__text">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.</p>
@@ -145,7 +151,7 @@
         </div>
       </div>
 
-      <div class="popup popup_type_succes popup_is-opened">
+      <div class="popup popup_type_succes">
         <div class="popup__content">
           <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close">
           <h3 class="popup__title">пользователь успешно зарегистрирован!</h3>
@@ -166,7 +172,7 @@
         </ul>
       </nav>
       <nav class="footer__social-links">
-        <ul class="footer__item-list">
+        <ul class="footer__social-item-list">
           <li class="footer__item"><a href="#" class="footer__social-link"><img src="<%=require('./images/gh_icon.svg')%>" alt="" class="footer__social-icon"></a></li>
           <li class="footer__item"><a href="#" class="footer__social-link"><img src="<%=require('./images/fb_icon.svg')%>" alt="" class="footer__social-icon"></a></li>
         </ul>

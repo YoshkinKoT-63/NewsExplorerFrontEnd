@@ -2,3 +2,21 @@
   display: flex;
   margin-left: 50px;
 }
+
+@media (max-width: 1080px) {
+  .footer__social-links {
+    margin-left: 24px;
+  }
+}
+
+@media (max-width: 740px) {
+  .footer__social-links {
+    order: 2;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer__social-links {
+    margin: 0;
+  }
+}

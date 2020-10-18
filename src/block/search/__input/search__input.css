@@ -11,5 +11,13 @@
   outline: none;
   border-radius: 50px;
   color: #1a1b22;
+  caret-color: #2F71E5;
+  transition: all .3s linear;
 }
 
+
+@media (max-width: 1080px) {
+  .search__input {
+    height: 56px;
+  }
+}

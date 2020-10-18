@@ -6,6 +6,11 @@
   box-sizing: border-box;
   background-color: #F5F6F7;
   margin: 0 auto;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding: 80px 0;
+}
+
+@media (max-width: 1080px) {
+  .result {
+    padding: 40px 0;
+  }
 }

@@ -7,3 +7,11 @@
   margin: 50px 0 0 0;
   color: #1A1B22;
 }
+
+@media (max-width: 1080px) {
+  .about__title {
+    font-size: 30px;
+    line-height: 40px;
+    margin: 0;
+  }
+}

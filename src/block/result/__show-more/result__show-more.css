@@ -14,3 +14,14 @@
   padding: 18px 84px;
   border-radius: 80px;
 }
+
+.result__show-more:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+@media (max-width: 1080px) {
+  .result {
+    margin: 32px auto 0 auto;
+  }
+}

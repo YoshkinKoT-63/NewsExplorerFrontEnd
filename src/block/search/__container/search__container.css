@@ -5,3 +5,9 @@
   max-width: 608px;
   box-sizing: border-box;
 }
+
+@media (max-width: 542px) {
+  .search__container {
+    width: calc(100% - 32px);
+  }
+}

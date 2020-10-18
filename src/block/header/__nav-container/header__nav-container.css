@@ -5,3 +5,9 @@
   align-items: baseline;
   position: relative;
 }
+
+@media (max-width: 600px) {
+  .header__nav-container {
+    display: none;
+  }
+}
