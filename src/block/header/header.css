@@ -9,10 +9,20 @@
 @import url(./__login/header__login.css);
 @import url(./_hide/header_hide.css);
 @import url(./__button/header__button.css);
+@import url(./__nav-links/header__nav-links.css);
+@import url(./__nav-toggle/header__nav-toggle.css);
+@import url(./_dark/header_dark.css);
+@import url(./__container/_dark/header__container_dark.css);
 
 .header {
   border-bottom: 1px solid #c4c4c4;
-  padding: 8px 0 0 0;
+  padding: 0;
   position: relative;
   z-index: 3;
+}
+
+@media (max-width: 600px) {
+  .header {
+    padding: 8px 0 8px 0;
+  }
 }

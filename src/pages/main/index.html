@@ -5,23 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NewsExplorer</title>
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
-  <link rel="icon" type="image/png" sizes="32x32" href="<%=require('./images/favicon.png')%>" />
+  <link rel="icon" type="image/png" sizes="32x32" href="<%=require('../../images/favicon.png')%>" />
 
 </head>
 <body class="news-explorer">
   <div class="page">
+
+
     <header class="header">
       <div class="header__container">
-      <a href="./index.html" class="header__logo" title="главная страница">NewsExplorer</a>
+
+      <a href="../main/index.html" class="header__logo" title="главная страница">NewsExplorer</a>
+
         <nav class="header__nav-container">
-          <a href="#" class="header__main header__nav-link">Главная</a>
-          <a href="#" class="header__nav-link header__nav-link_dim header_hide">Сохранённые статьи</a>
-          <a href="#" class="header__sign-up header__nav-link header__nav-link_button">Авторизоваться</a>
-          <a href="#" class="header__login header__nav-link header__nav-link_button header_hide">Александр</a>
+
+          <ul class="header__nav-links">
+
+            <li><a href="#" class="header__main header__nav-link">Главная</a></li>
+            <li><a href="#" class="header__nav-link">Сохранённые статьи</a></li>
+            <li><button class="header__sign-up header__nav-link header__nav-link_button">Авторизоваться</button></li>
+            <li><button class="header__login header__nav-link header__nav-link_button">Александр</button></li>
+
+          </ul>
+
+          <button class="header__button"></button>
+
         </nav>
-        <button type="button" class="header__button"></button>
+
       </div>
+
     </header>
+
+
+
     <main class="content">
       <section class="search">
         <div class="search__container">
@@ -40,7 +56,7 @@
       </section>
 
       <section class="no-result">
-        <img src="<%=require('./images/not-found_v1.svg')%>" alt="" class="no-result__image" />
+        <img src="<%=require('../../images/not-found_v1.svg')%>" alt="" class="no-result__image" />
         <h2 class="no-result__tittle">Ничего не найдено</h2>
         <p class="no-result__text">
           К сожалению по вашему запросу ничего не найдено.
@@ -54,7 +70,7 @@
           <div class="card">
             <p class="card__notice card_hide">Войдите, чтобы сохранять статьи</p>
             <button class="card__button"></button>
-            <img src="<%=require('./images/image_08.png')%>" alt="" class="card__image">
+            <img src="<%=require('../../images/image_08.png')%>" alt="" class="card__image">
             <div class="card__article-container">
               <div class="card__date">2 августа, 2019</div>
               <h3 class="card__tittle">Национальное достояние – парки</h3>
@@ -66,7 +82,7 @@
           <div class="card">
             <p class="card__notice">Войдите, чтобы сохранять статьи</p>
             <button class="card__button"></button>
-            <img src="<%=require('./images/image_04.png')%>" alt="" class="card__image">
+            <img src="<%=require('../../images/image_04.png')%>" alt="" class="card__image">
             <div class="card__article-container">
               <div class="card__date">2 августа, 2019</div>
               <h3 class="card__tittle">Лесные огоньки: история одной фотографии</h3>
@@ -79,7 +95,7 @@
           <div class="card">
             <p class="card__notice card_hide">Войдите, чтобы сохранять статьи</p>
             <button class="card__button card__button_added"></button>
-            <img src="<%=require('./images/image_07.png')%>" alt="" class="card__image">
+            <img src="<%=require('../../images/image_07.png')%>" alt="" class="card__image">
             <div class="card__article-container">
               <div class="card__date">2 августа, 2019</div>
               <h3 class="card__tittle">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
@@ -95,9 +111,9 @@
       </section>
       <section class="about">
         <picture>
-          <source media="(max-width: 321px)" srcset="<%=require('./images/author_image_320.png')%>"/>
-          <source media="(max-width: 767px)" srcset="<%=require('./images/author_image_768.png')%>"/>
-          <img src="<%=require('./images/author_image_full.png')%>" alt="" class="about__photo"/>
+          <source media="(max-width: 321px)" srcset="<%=require('../../images/author_image_320.png')%>"/>
+          <source media="(max-width: 767px)" srcset="<%=require('../../images/author_image_768.png')%>"/>
+          <img src="<%=require('../../images/author_image_full.png')%>" alt="" class="about__photo"/>
         </picture>
         <div class="about__text-container">
           <h2 class="about__title">Об авторе</h2>
@@ -108,15 +124,15 @@
 
       <div class="popup popup_type_sign-in">
         <div class="popup__content">
-          <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close">
+          <img src="<%=require('../../images/close.svg')%>" alt="" class="popup__close">
           <h3 class="popup__title">вход</h3>
           <form class="popup__form" name="sign-in">
               <label class="popup__label">email</label>
-              <input type="text" id="email" name="email" class="popup__input popup__input_type_email" placeholder="Введите почту" minlength="2" maxlength="30" required>
-              <span id="email-error" class="popup__error"></span>
+              <input type="text" id="sign-in-email" name="email" class="popup__input popup__input_type_email" placeholder="Введите почту" minlength="2" maxlength="30" required>
+              <span id="sign-in-email-error" class="popup__error"></span>
               <label class="popup__label">пароль</label>
-              <input type="password" id="password" name="password" class="popup__input popup__input_type_password" placeholder="Введите пароль" required>
-              <span id="password-error" class="popup__error"></span>
+              <input type="password" id="sign-in-password" name="password" class="popup__input popup__input_type_password" placeholder="Введите пароль" required>
+              <span id="sign-in-password-error" class="popup__error"></span>
               <button type="submit" class="button popup__button popup__button_inactive popup__button_sign-in">войти</button>
               <p class="popup__form-button-text">
                 или
@@ -128,15 +144,15 @@
 
       <div class="popup popup_type_sign-up">
         <div class="popup__content">
-          <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close">
+          <img src="<%=require('../../images/close.svg')%>" alt="" class="popup__close">
           <h3 class="popup__title">регистрация</h3>
           <form class="popup__form" name="sign-up">
               <label class="popup__label">email</label>
-              <input type="text" id="email" name="email" class="popup__input popup__input_type_email" placeholder="Введите почту" minlength="2" maxlength="30" required>
-              <span id="email-error" class="popup__error"></span>
+              <input type="text" id="sign-up-email" name="email" class="popup__input popup__input_type_email" placeholder="Введите почту" minlength="2" maxlength="30" required>
+              <span id="sign-up-email-error" class="popup__error"></span>
               <label class="popup__label">пароль</label>
-              <input type="password" id="password" name="password" class="popup__input popup__input_type_password" placeholder="Введите пароль" required>
-              <span id="password-error" class="popup__error"></span>
+              <input type="password" id="sign-up-password" name="password" class="popup__input popup__input_type_password" placeholder="Введите пароль" required>
+              <span id="sign-up-password-error" class="popup__error"></span>
 
               <label class="popup__label">имя</label>
               <input type="text" id="name" name="name" class="popup__input popup__input_type_name" placeholder="Введите имя" minlength="2" maxlength="30" required>
@@ -153,7 +169,7 @@
 
       <div class="popup popup_type_succes">
         <div class="popup__content">
-          <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close">
+          <img src="<%=require('../../images/close.svg')%>" alt="" class="popup__close">
           <h3 class="popup__title">пользователь успешно зарегистрирован!</h3>
           <button type="button" class="popup__button_succes">войти</button>
         </div>
@@ -173,8 +189,8 @@
       </nav>
       <nav class="footer__social-links">
         <ul class="footer__social-item-list">
-          <li class="footer__item"><a href="#" class="footer__social-link"><img src="<%=require('./images/gh_icon.svg')%>" alt="" class="footer__social-icon"></a></li>
-          <li class="footer__item"><a href="#" class="footer__social-link"><img src="<%=require('./images/fb_icon.svg')%>" alt="" class="footer__social-icon"></a></li>
+          <li class="footer__item"><a href="#" class="footer__social-link"><img src="<%=require('../../images/gh_icon.svg')%>" alt="" class="footer__social-icon"></a></li>
+          <li class="footer__item"><a href="#" class="footer__social-link"><img src="<%=require('../../images/fb_icon.svg')%>" alt="" class="footer__social-icon"></a></li>
         </ul>
       </nav>
     </footer>
