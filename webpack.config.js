@@ -109,7 +109,7 @@ module.exports = {
       }),
       new HtmlWebpackPlugin({
         inject: false,
-        filename: 'articles/index.html',
+        filename: 'articles.html',
         template: 'src/pages/articles/index.html',
         chunks: ['articles'],
       }),

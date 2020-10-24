@@ -1,3 +1,3 @@
 .header__button_white::before {
-  content: url(/../../../../images/menu_white.svg);
+  content: url(../../../../images/menu_white.svg);
 }

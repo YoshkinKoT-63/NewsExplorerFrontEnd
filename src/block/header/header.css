@@ -19,6 +19,7 @@
 @import url(./__login/_dark/header__login_dark.css);
 @import url(./__button/_dark/header__button_dark.css);
 @import url(./__button/_white/header__button_white.css);
+@import url(./__nav-links/_is-opened/header__nav-links_is-opened.css);
 
 .header {
   border-bottom: 1px solid #c4c4c4;
