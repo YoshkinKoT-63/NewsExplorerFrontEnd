@@ -1,0 +1,21 @@
+.report__container {
+  max-width: 1232px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 40px 0 56px 0;
+  width: calc(100% - 208px);
+}
+
+@media (max-width: 1080px) {
+  .report__container {
+    width: calc(100% - 80px);
+    padding: 24px 0 32px 0;
+
+  }
+}
+
+@media (max-width: 720px) {
+  .details__container {
+    padding: 7px 0 15px 0;
+  }
+}

@@ -9,7 +9,7 @@
 
 @media (max-width: 800px) {
   .header__nav-links {
-    display: flex;
+    display: none;
     flex-direction: column;
     position: absolute;
     top: 56px;

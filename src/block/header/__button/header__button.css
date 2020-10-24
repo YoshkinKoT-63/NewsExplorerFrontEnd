@@ -8,10 +8,7 @@
   outline: none;
   user-select: none;
   margin-left: auto;
-}
-
-.header__button::before {
-  content: url(../../../images/menu.svg);
+  cursor: pointer;
 }
 
 @media (max-width: 800px) {

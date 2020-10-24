@@ -3,6 +3,7 @@
   border-radius: 50px;
   background-color: inherit;
   padding: 12px;
+  cursor: pointer;
 }
 
 @media (max-width: 800px) {

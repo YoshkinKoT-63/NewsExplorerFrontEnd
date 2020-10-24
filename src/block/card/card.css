@@ -7,8 +7,11 @@
 @import url(./__source/card__source.css);
 @import url(./__article-container/card__article-container.css);
 @import url(./__hide/card_hide.css);
+@import url(./__keyword/card__keyword.css);
 @import url(./__button/_added/card__button_added.css);
-
+@import url(./__button/_delete/card__button_delete.css);
+@import url(./__button/_add/card__button_add.css);
+@import url(./__notice/__notice_is-opened/card__notice_is-opened.css);
 
 .card {
   box-sizing: border-box;
