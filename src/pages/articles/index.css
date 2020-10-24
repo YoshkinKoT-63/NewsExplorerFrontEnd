@@ -12,3 +12,7 @@
 @import url(../../block/preloader/preloader.css);
 @import url(../../block/no-result/no-result.css);
 @import url(../../block/popup/popup.css);
+
+div {
+  border: 1px solid red;
+}
