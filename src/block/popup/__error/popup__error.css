@@ -7,7 +7,7 @@
   margin: 0 0 13px 0;
   box-sizing: border-box;
   height: 13px;
-  transition: all .3 linear;
+  transition: all .3s linear;
 }
 
 .popup__error:nth-of-type(3n) {

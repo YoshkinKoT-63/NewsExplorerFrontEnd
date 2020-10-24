@@ -15,7 +15,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  transition: all .2ms linear;
+  transition: all .3s linear;
   cursor: pointer;
   position: absolute;
   left: 24px;
