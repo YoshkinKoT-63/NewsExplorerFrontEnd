@@ -12,6 +12,7 @@ export default class Popup {
 
 //закрытие окна
   close() {
+    console.log('Сработало закрытие попапа');
     this.element.classList.remove('popup_is-opened');
   };
 
