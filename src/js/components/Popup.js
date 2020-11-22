@@ -1,8 +1,12 @@
-export default class Popup {
+import BaseComponent from './BaseComponent';
+
+export default class Popup extends BaseComponent {
   constructor(popup) {
+    super();
     this.element = popup; //форма попап
     this.closePopupButton = this.element.querySelector('.popup__close');//найти кнопку закрытия окна
     this.closePopupByEscapeButton = this.closePopupByEscapeButton.bind(this);
+    console.log(this._setHandlers);
   };
 
 //открытие окна
@@ -23,8 +27,12 @@ export default class Popup {
     }
   };
 
+
   setEventListeners() {
-    this.closePopupButton.addEventListener('click', () => {this.close()});//закрытие по крестику
-    window.addEventListener('keydown', this.closePopupByEscapeButton); //обработчик закрытия формы ввода при нажатии клавиши Esc
-  };
+    this._setHandlers([
+      [this.closePopupButton, 'click', () => {this.close()}],
+      [window, 'keydown', this.closePopupByEscapeButton]
+    ]);
+  }
+
 }
