@@ -1,5 +1,6 @@
 @import url(./__circle/preloader__circle.css);
 @import url(./__text/preloader__text.css);
+@import url(./_hide/preloader_hide.css);
 
 .preloader {
   display: flex;

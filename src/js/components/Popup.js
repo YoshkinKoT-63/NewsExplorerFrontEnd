@@ -27,6 +27,13 @@ export default class Popup extends BaseComponent {
     }
   };
 
+// Очищает форму ввода попапа
+clearPopup() {
+  console.log('сработал сброс формы')
+  this.element.querySelector('.popup__form').reset();
+
+  // this._clearHandler(this._link, 'click', this._handleOpenPopup);
+}
 
   setEventListeners() {
     this._setHandlers([

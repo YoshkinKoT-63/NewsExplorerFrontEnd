@@ -11,6 +11,7 @@ export default class PopupSignIn extends Popup {
 
   setEventListeners() {
     super.setEventListeners();
+    this.openButton.addEventListener('click', () => this.clearPopup());//сброс формы по заданной кнопке
     this.openButton.addEventListener('click', () => this.open());//открытие по заданной кнопке
     this.openButtonSecond.addEventListener('click', () => this.open());//открытие по заданной кнопке
     this.signUpButtom.addEventListener('click', () => this.close());//закрыть попап перед открытием попапа регистрации
