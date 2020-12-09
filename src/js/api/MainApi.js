@@ -1,6 +1,7 @@
 export default class MainApi {
   constructor(option) {
     this._option = option;
+
   }
 
 
@@ -15,15 +16,32 @@ export default class MainApi {
 //регистрация пользователя-------------------------------------------------------------------------------
 
   signup(email, password, name) {
-    return fetch(`${this._option.baseUrl}.signup`, {
+    return fetch(`${this._option.url}/signup`, {
+      redirect: 'follow',
+      credentials: 'include',
       method: 'POST',
-      headers: this._options.headers,
+      headers: this._option.headers,
       body: JSON.stringify({
         email, password, name,
       }),
     })
       .then((res) => this._getResponseData(res));
   }
+
+//логин пользователя-------------------------------------------------------------------------------
+
+signin (email, password) {
+  return fetch(`${this._option.url}/signin`, {
+    redirect: 'follow',
+    credentials: 'include',
+    method: 'POST',
+    headers: this._option.headers,
+    body: JSON.stringify({
+      email, password,
+    }),
+  })
+    .then((res) => this._getResponseData(res));
+}
 
 //--------------------------------------------------------------------------------------------------------
 

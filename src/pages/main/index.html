@@ -114,13 +114,13 @@
         <div class="popup__content">
           <img src="<%=require('../../images/close.svg')%>" alt="" class="popup__close">
           <h3 class="popup__title">вход</h3>
-          <form class="popup__form" name="sign-in">
+          <form class="popup__form" name="sign_in">
               <label class="popup__label">email</label>
-              <input type="text" id="sign-in-email" name="email" class="popup__input popup__input_type_email" placeholder="Введите почту" minlength="2" maxlength="30" required>
-              <span id="sign-in-email-error" class="popup__error"></span>
+              <input type="text" id="signin_email" name="email" class="popup__input popup__input_type_email" placeholder="Введите почту" pattern="[\w]{1,}([-_\.][\w]{1,}){0,}@[\w]{1,}([-_\.][\w]{1,}){0,}\.[\w]{1,4}" required>
+              <span id="signin_email-error" class="popup__error"></span>
               <label class="popup__label">пароль</label>
-              <input type="password" id="sign-in-password" name="password" class="popup__input popup__input_type_password" placeholder="Введите пароль" required>
-              <span id="sign-in-password-error" class="popup__error"></span>
+              <input type="password" id="signin_password" name="password" class="popup__input popup__input_type_password" placeholder="Введите пароль" minlength="8" required>
+              <span id="signin_password-error" class="popup__error"></span>
               <button type="submit" class="button popup__button popup__button_inactive popup__button_sign-in">войти</button>
               <p class="popup__form-button-text">
                 или
@@ -134,13 +134,13 @@
         <div class="popup__content">
           <img src="<%=require('../../images/close.svg')%>" alt="" class="popup__close">
           <h3 class="popup__title">регистрация</h3>
-          <form class="popup__form" name="sign-up">
+          <form class="popup__form" name="sign_up">
               <label class="popup__label">email</label>
-              <input type="text" id="sign-up-email" name="email" class="popup__input popup__input_type_email" placeholder="Введите почту" minlength="2" maxlength="30" required>
-              <span id="sign-up-email-error" class="popup__error"></span>
+              <input type="text" id="signup_email" name="email" class="popup__input popup__input_type_email" placeholder="Введите почту" pattern="[\w]{1,}([-_\.][\w]{1,}){0,}@[\w]{1,}([-_\.][\w]{1,}){0,}\.[\w]{1,4}" required>
+              <span id="signup_email-error" class="popup__error"></span>
               <label class="popup__label">пароль</label>
-              <input type="password" id="sign-up-password" name="password" class="popup__input popup__input_type_password" placeholder="Введите пароль" required>
-              <span id="sign-up-password-error" class="popup__error"></span>
+              <input type="password" id="signup_password" name="password" class="popup__input popup__input_type_password" placeholder="Введите пароль" minlength="8" required>
+              <span id="signup_password-error" class="popup__error"></span>
               <label class="popup__label">имя</label>
               <input type="text" id="name" name="name" class="popup__input popup__input_type_name" placeholder="Введите имя" minlength="2" maxlength="30" required>
               <span id="name-error" class="popup__error"></span>

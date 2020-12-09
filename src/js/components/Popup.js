@@ -6,11 +6,11 @@ export default class Popup extends BaseComponent {
     this.element = popup; //форма попап
     this.closePopupButton = this.element.querySelector('.popup__close');//найти кнопку закрытия окна
     this.closePopupByEscapeButton = this.closePopupByEscapeButton.bind(this);
-    console.log(this._setHandlers);
   };
 
 //открытие окна
   open() {
+
     this.element.classList.add('popup_is-opened');
   };
 
@@ -31,8 +31,6 @@ export default class Popup extends BaseComponent {
 clearPopup() {
   console.log('сработал сброс формы')
   this.element.querySelector('.popup__form').reset();
-
-  // this._clearHandler(this._link, 'click', this._handleOpenPopup);
 }
 
   setEventListeners() {

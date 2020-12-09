@@ -1,5 +1,8 @@
-export default class FormValidator {
-  constructor(form, errorMessages){
+import BaseComponent from './BaseComponent';
+
+export default class FormValidator extends BaseComponent {
+  constructor(errorMessages, form){
+    super();
     this.form = form;
     this.errorMessages = errorMessages;
     this.button = this.form.querySelector('.popup__button');
@@ -19,12 +22,16 @@ export default class FormValidator {
         input.setCustomValidity(this.errorMessages.empty);
         return false
       }
+      if (input.validity.tooShort && input.type === 'password') {
+        input.setCustomValidity(this.errorMessages.wrongPassword);
+        return false
+      }
       if (input.validity.tooShort || input.validity.tooLong) {
         input.setCustomValidity(this.errorMessages.wrongLength);
         return false
       }
-      if (input.validity.typeMismatch && input.type === 'url') {
-        input.setCustomValidity(this.errorMessages.wrongUrl);
+      if (input.validity.patternMismatch) {
+        input.setCustomValidity(this.errorMessages.wrongEmail);
         return false
       }
       return input.checkValidity();
@@ -42,12 +49,14 @@ export default class FormValidator {
   setButtonActive() {
     this.button.removeAttribute('disabled');
     this.button.classList.add('popup__button_active');
+    this.button.classList.remove('popup__button_inactive');
   };
 
   //отключение кнопки ввода формы
   setButtonInactive() {
     this.button.setAttribute('disabled', 'disabled');
     this.button.classList.remove('popup__button_active');
+    this.button.classList.add('popup__button_inactive');
   };
 
 //метод сброса ошибок валидации
@@ -67,8 +76,14 @@ export default class FormValidator {
       }
   };
 
-  //добавление слушателей
+// добавление слушателей
   setEventListeners() {
     this.form.addEventListener('input', this.inputHandler, true);
   };
+
+  // setEventListeners() {
+  //   this._setHandlers([
+  //     [this.form, 'input', () => {this.inputHandler()}],
+  //   ]);
+  // }
 }
