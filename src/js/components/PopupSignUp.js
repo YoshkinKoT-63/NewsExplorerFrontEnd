@@ -1,7 +1,7 @@
 import Popup from './Popup.js';
 
 export default class PopupSignUp extends Popup {
-  constructor(popup, openButton, popupSucces, mainApi) {
+  constructor(popup, openButton, popupSucces, mainApi, validation) {
     super(popup);
     this.popup = popup;
     this.popupForm = document.forms.sign_up;
@@ -10,6 +10,7 @@ export default class PopupSignUp extends Popup {
     this.signInButtom = document.querySelector('.popup__form-button-sign-in');
     this.popupSucces = popupSucces;
     this.mainApi = mainApi;
+    this.validation = validation;
   }
 
 //отправка данных для регистрации
@@ -28,14 +29,14 @@ export default class PopupSignUp extends Popup {
       this.popupSucces.open();
     })
     .catch(err => {
-      alert(err);
+      console.log(err);
+      this.validation.setServerError(err);
     });
 
   }
 
   setEventListeners() {
     super.setEventListeners();
-    this.openButton.addEventListener('click', () => this.clearPopup());//сброс формы по заданной кнопке
     this.openButton.addEventListener('click', () => this.open());//открытие по заданной кнопке
     this.signInButtom.addEventListener('click', () => this.close());//закрыть попап перед открытием попапа логина
     this.popupForm.addEventListener('submit', this.submit);

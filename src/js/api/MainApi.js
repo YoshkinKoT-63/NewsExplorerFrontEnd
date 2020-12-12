@@ -43,6 +43,20 @@ signin (email, password) {
     .then((res) => this._getResponseData(res));
 }
 
+
+//получение данных пользователя-----------------------------------------------------------------------
+
+getUserData() {
+  this._option.headers['Authorization'] = `Bearer ${localStorage.getItem('jwt')}`;
+  return fetch(`${this._option.url}/users/me`, {
+    redirect: 'follow',
+    credentials: 'include',
+    method: 'GET',
+    headers: this._option.headers,
+  })
+  .then((res) => this._getResponseData(res));
+}
+
 //--------------------------------------------------------------------------------------------------------
 
 

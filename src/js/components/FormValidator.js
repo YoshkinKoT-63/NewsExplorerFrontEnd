@@ -76,6 +76,13 @@ export default class FormValidator extends BaseComponent {
       }
   };
 
+
+ // оторбражение ошибки с сервера
+  setServerError(serverErr) {
+    this.form.querySelector('.popup__server-error').textContent = serverErr;
+  }
+
+
 // добавление слушателей
   setEventListeners() {
     this.form.addEventListener('input', this.inputHandler, true);

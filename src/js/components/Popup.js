@@ -8,9 +8,16 @@ export default class Popup extends BaseComponent {
     this.closePopupByEscapeButton = this.closePopupByEscapeButton.bind(this);
   };
 
+
+// Очищает форму ввода попапа
+clearPopup() {
+  console.log('сработал сброс формы')
+  this.element.querySelector('.popup__form').reset();
+}
+
 //открытие окна
   open() {
-
+    this.clearPopup();
     this.element.classList.add('popup_is-opened');
   };
 
@@ -26,12 +33,6 @@ export default class Popup extends BaseComponent {
       this.close();
     }
   };
-
-// Очищает форму ввода попапа
-clearPopup() {
-  console.log('сработал сброс формы')
-  this.element.querySelector('.popup__form').reset();
-}
 
   setEventListeners() {
     this._setHandlers([
