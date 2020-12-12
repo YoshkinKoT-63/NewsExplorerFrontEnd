@@ -1,9 +1,8 @@
 import Popup from './Popup.js';
 
 export default class PopupSignIn extends Popup {
-  constructor(popup, openButton, buttonPopupAuth, buttonPopupSignInAfterSucces, mainApi, validation) {
+  constructor(popup, buttonPopupAuth, buttonPopupSignInAfterSucces, mainApi, validation) {
     super(popup);
-    this.openButton = openButton;
     this.buttonPopupAuth = buttonPopupAuth;
     this.buttonPopupSignInAfterSucces = buttonPopupSignInAfterSucces;
     this.signUpButtom = document.querySelector('.popup__form-button-sign-up');

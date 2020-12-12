@@ -14,7 +14,6 @@ export default class Header extends BaseComponent {
   // Рендер шапки
   render() {
     if (window.localStorage.getItem("jwt")) {
-      console.log(window.localStorage.getItem("jwt"));
       this._template = this.authMenu.content.querySelector('.header__nav-container');
       this._element = this._template.cloneNode(true);
       this._buttonLogOut = this._element.querySelector('.header__logout');
@@ -36,7 +35,14 @@ export default class Header extends BaseComponent {
       this.buttonAuth = document.querySelector('.header__auth');
       this.buttonAuth.addEventListener('click', () => this.popupSignIn.open());//открытие по заданной кнопке
     }
+    this.header_nav = this._container.querySelector('.header__nav-links');
+    this.header_button = this._container.querySelector('.header__button');
+    this.header_button.addEventListener('click', () => this.burgerShow())
   }
 
+// бургер меню
+  burgerShow() {
+    this.header_nav.classList.toggle("header__nav-links_is-opened");
+  }
 
 }

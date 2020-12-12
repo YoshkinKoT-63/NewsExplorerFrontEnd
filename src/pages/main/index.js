@@ -3,7 +3,7 @@ import "./index.css";
 //импорт констант
 
 import { SERVER_URL, ERROR_MESSAGES, SERVER_CONFIG } from '../../js/constants/data.js'
-import { buttonAuth, HEADER_CONTAINER, NAV_AUTH_TEMPLATE, NAV_UNAUTH_TEMPLATE } from '../../js/constants/header.js';
+import { HEADER_CONTAINER, NAV_AUTH_TEMPLATE, NAV_UNAUTH_TEMPLATE } from '../../js/constants/header.js';
 import { popupSignInContainer, buttonPopupAuth } from '../../js/constants/popupSignIn.js';
 import { popupSignUpContainer, buttonReg } from '../../js/constants/popupSignUp.js';
 import { popupSuccesContainer, popupButtonSignInAfterSucces } from '../../js/constants/popupSucces.js';
@@ -27,7 +27,7 @@ const validationSignIn = new FormValidator(ERROR_MESSAGES, popupSignInContainer)
 
 const validationSignUp = new FormValidator(ERROR_MESSAGES, popupSignUpContainer); //валидация полей при регистрации
 
-const popupSignIn = new PopupSignIn(popupSignInContainer, buttonAuth, buttonPopupAuth, popupButtonSignInAfterSucces, mainApi, validationSignIn); //попап логина
+const popupSignIn = new PopupSignIn(popupSignInContainer, buttonPopupAuth, popupButtonSignInAfterSucces, mainApi, validationSignIn); //попап логина
 
 const popupSucces = new PopupSucces(popupSuccesContainer); // попап успешной регистрации
 
@@ -36,6 +36,7 @@ const popupSignUp = new PopupSignIUp(popupSignUpContainer, buttonReg, popupSucce
 const header = new Header(HEADER_CONTAINER, popupSignIn, NAV_AUTH_TEMPLATE, NAV_UNAUTH_TEMPLATE);
 
 header.render();
+
 
 
 popupSignIn.setEventListeners();
