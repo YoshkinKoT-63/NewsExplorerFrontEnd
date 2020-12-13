@@ -7,8 +7,6 @@ export default class Header extends BaseComponent {
     this.popupSignIn = popupSignIn;
     this.authMenu = authMenu;
     this.unAuthMenu = unAuthMenu;
-    console.log(this.authMenu);
-
    }
 
   // Рендер шапки

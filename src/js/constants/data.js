@@ -15,8 +15,16 @@ const SERVER_CONFIG = {
   },
 };
 
+
+const NEWS_API_CONFIG = {
+  key: 'fba4e04be8764ddf9ace1cfaaa116caa',
+  url: 'https://nomoreparties.co/news',
+  pageSize: '100',
+};
+
+
 export {
-  SERVER_URL,
   ERROR_MESSAGES,
-  SERVER_CONFIG
+  SERVER_CONFIG,
+  NEWS_API_CONFIG
 };
