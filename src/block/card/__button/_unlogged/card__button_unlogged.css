@@ -1,0 +1,3 @@
+.card__button_unlogged:hover~.card__notice {
+  display: block;
+}

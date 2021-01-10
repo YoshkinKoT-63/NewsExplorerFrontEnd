@@ -26,23 +26,25 @@ export default class Search extends BaseComponent {
   }
 
   requestNews() {
-    if (this.search_input.value) {
+    let searchValue = this.search_input.value;
+    if (searchValue) {
       this.preloader.classList.remove('preloader_hide');
       this.result.classList.add('result_hide');
       if (!this.no_result.classList.contains('no-result_hide')) {
         this.no_result.classList.add('no-result_hide');
       }
       this.newsApi
-        .getNews(this.search_input.value, this.formatDate(this.today), this.formatDate(this.weekBefore))
+        .getNews(searchValue, this.formatDate(this.today), this.formatDate(this.weekBefore))
         .then((res) => {
           this.preloader.classList.add('preloader_hide');
-
-          if (res.articles.length > 0) {
+          const articles = res.articles;
+          if (articles.length > 0) {
             this.search_input.value = '';
             this.result.classList.remove('result_hide');
-            this.newsCardList.renderResult(res.articles);
+            this.newsCardList.setKeyword(searchValue);
+            this.newsCardList.renderResult({articles});
             // console.log(res.articles);
-          } else if (res.articles.length === 0) {
+          } else if (articles.length === 0) {
             this.no_result.classList.remove('no-result_hide');
           }
         })
@@ -57,7 +59,7 @@ export default class Search extends BaseComponent {
 
   setEventListeners() {
     this.search_button.addEventListener("click", this.requestNews);
-    this.search_button.addEventListener("click", this.newsCardList.clear());
+    this.search_button.addEventListener("click", () => this.newsCardList.clear());
   }
 
 

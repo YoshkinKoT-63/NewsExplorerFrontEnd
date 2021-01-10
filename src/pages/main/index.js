@@ -42,7 +42,7 @@ const popupSignUp = new PopupSignIUp(popupSignUpContainer, buttonReg, popupSucce
 
 const header = new Header(HEADER_CONTAINER, popupSignIn, NAV_AUTH_TEMPLATE, NAV_UNAUTH_TEMPLATE);
 
-const newsCard = new NewsCard(CARD);
+const newsCard = new NewsCard(CARD, mainApi);
 
 const newsCardList = new NewsCardList(CARD_LIST, SHOW_MORE_BUTTON, newsCard);
 

@@ -30,34 +30,68 @@ export default class MainApi {
 
 //логин пользователя-------------------------------------------------------------------------------
 
-signin (email, password) {
-  return fetch(`${this._option.url}/signin`, {
-    redirect: 'follow',
-    credentials: 'include',
-    method: 'POST',
-    headers: this._option.headers,
-    body: JSON.stringify({
-      email, password,
-    }),
-  })
-    .then((res) => this._getResponseData(res));
-}
+  signin (email, password) {
+    return fetch(`${this._option.url}/signin`, {
+      redirect: 'follow',
+      credentials: 'include',
+      method: 'POST',
+      headers: this._option.headers,
+      body: JSON.stringify({
+        email, password,
+      }),
+    })
+      .then((res) => this._getResponseData(res));
+  }
 
 
 //получение данных пользователя-----------------------------------------------------------------------
 
-getUserData() {
-  this._option.headers['Authorization'] = `Bearer ${localStorage.getItem('jwt')}`;
-  return fetch(`${this._option.url}/users/me`, {
-    redirect: 'follow',
-    credentials: 'include',
-    method: 'GET',
-    headers: this._option.headers,
-  })
-  .then((res) => this._getResponseData(res));
-}
+  getUserData() {
+    this._option.headers['Authorization'] = `Bearer ${localStorage.getItem('jwt')}`;
+    return fetch(`${this._option.url}/users/me`, {
+      redirect: 'follow',
+      credentials: 'include',
+      method: 'GET',
+      headers: this._option.headers,
+    })
+    .then((res) => this._getResponseData(res));
+  }
 
+//сохранение карточки статьи-----------------------------------------------------------------------
+
+  saveArticle(data) {
+    this._option.headers['Authorization'] = `Bearer ${localStorage.getItem('jwt')}`;
+    return fetch(`${this._option.url}/articles`, {
+      credentials: 'include',
+      method: 'POST',
+      headers: this._option.headers,
+      body: JSON.stringify({
+        keyword: data.keyword,
+        title: data.title,
+        text: data.text,
+        date: data.date,
+        source: data.source,
+        link: data.link,
+        image: data.image,
+      }),
+    })
+      .then((res) => this._getResponseData(res));
+  }
+
+//сохранение карточки статьи-----------------------------------------------------------------------
+  deleteArticle(data) {
+    this._option.headers['Authorization'] = `Bearer ${localStorage.getItem('jwt')}`;
+    return fetch(`${this._option.url}/articles/${data.id}`, {
+      credentials: 'include',
+      method: 'DELETE',
+      headers: this._option.headers,
+      body: JSON.stringify({
+      }),
+    })
+      .then((res) => this._getResponseData(res));
+  }
 //--------------------------------------------------------------------------------------------------------
+
 
 
 

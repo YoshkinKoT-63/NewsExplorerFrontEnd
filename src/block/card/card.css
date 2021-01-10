@@ -11,7 +11,8 @@
 @import url(./__button/_added/card__button_added.css);
 @import url(./__button/_delete/card__button_delete.css);
 @import url(./__button/_add/card__button_add.css);
-@import url(./__notice/__notice_is-opened/card__notice_is-opened.css);
+@import url(./__keyword/_hide/card__keyword_hide.css);
+@import url(./__button/_unlogged/card__button_unlogged.css);
 
 .card {
   box-sizing: border-box;
@@ -19,6 +20,7 @@
   border-radius: 16px;
   max-width: 400px;
   position: relative;
+  text-decoration: none;
 }
 
 .card:hover {
