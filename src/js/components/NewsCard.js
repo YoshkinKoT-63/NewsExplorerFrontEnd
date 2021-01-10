@@ -69,7 +69,7 @@ export default class NewsCard {
     this._element = this.card.cloneNode(true);
     if (data.urlToImage !== null) {
       this._element.querySelector('.card__image').src = data.urlToImage;
-    };
+    }
 
 // Отрисовка блока сохранения карточки
     if (window.localStorage.getItem('jwt')) {

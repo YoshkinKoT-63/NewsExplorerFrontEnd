@@ -43,7 +43,6 @@ export default class Search extends BaseComponent {
             this.result.classList.remove('result_hide');
             this.newsCardList.setKeyword(searchValue);
             this.newsCardList.renderResult({articles});
-            // console.log(res.articles);
           } else if (articles.length === 0) {
             this.no_result.classList.remove('no-result_hide');
           }
