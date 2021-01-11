@@ -23,6 +23,9 @@ import Search from '../../js/components/Search.js';
 import NewsCardList from '../../js/components/NewsCardList.js';
 import NewsCard from '../../js/components/NewsCard.js';
 
+// импорт утилит
+import formatDate from '../../js/utils/formatDate.js';
+
 // инициализация классов
 
 const mainApi = new MainApi(SERVER_CONFIG); // апи регистрации/логина
@@ -42,7 +45,7 @@ const popupSignUp = new PopupSignIUp(popupSignUpContainer, buttonReg, popupSucce
 
 const header = new Header(HEADER_CONTAINER, popupSignIn, NAV_AUTH_TEMPLATE, NAV_UNAUTH_TEMPLATE);
 
-const newsCard = new NewsCard(CARD, mainApi);
+const newsCard = new NewsCard(CARD, mainApi, formatDate);
 
 const newsCardList = new NewsCardList(CARD_LIST, SHOW_MORE_BUTTON, newsCard);
 

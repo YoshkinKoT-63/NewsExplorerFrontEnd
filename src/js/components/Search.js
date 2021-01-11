@@ -40,6 +40,8 @@ export default class Search extends BaseComponent {
           const articles = res.articles;
           if (articles.length > 0) {
             this.search_input.value = '';
+            this.search_input.placeholder = 'Введите тему новости';
+            this.newsCardList.clear();
             this.result.classList.remove('result_hide');
             this.newsCardList.setKeyword(searchValue);
             this.newsCardList.renderResult({articles});
@@ -58,7 +60,7 @@ export default class Search extends BaseComponent {
 
   setEventListeners() {
     this.search_button.addEventListener("click", this.requestNews);
-    this.search_button.addEventListener("click", () => this.newsCardList.clear());
+    // this.search_button.addEventListener("click", () => this.newsCardList.clear());
   }
 
 

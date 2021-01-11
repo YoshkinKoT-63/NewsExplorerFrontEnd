@@ -32,12 +32,15 @@ export default class NewsCardList {
   toggleShowMoreButton() {
     if (this.counter === this.cards.length) {
       this.showMoreButton.classList.add('result_hide');
+    } else {
+      this.showMoreButton.classList.remove('result_hide');
     }
   }
 
 // рендер карточек из поиска
   renderResult(data) {
     this.cards = data.articles;
+    console.log(this.cards);
     this.number = (this.cards.length < 3) ? this.cards.length : 3;
     for (this.counter = 0; this.counter < this.number; this.counter++) {
       this.addCard(this.cards[this.counter], this.keyword);
@@ -47,10 +50,18 @@ export default class NewsCardList {
 
 // рендер карточек при нажатии кнопки "показать ещё"
   showMore() {
-    this.counter += 3;
-    for (let i = this.counter - 3; i < this.counter; i++) {
-      this.addCard(this.cards[i], this.keyword);
-    }
+    if (this.cards.length - this.counter < 3) {
+      // this.counter = this.cards.length;
+      for (let i = this.counter; i < this.cards.length; i++) {
+        this.addCard(this.cards[i], this.keyword);
+        }
+        this.counter = this.cards.length;
+      } else {
+        this.counter += 3;
+        for (let i = this.counter - 3; i < this.counter; i++) {
+          this.addCard(this.cards[i], this.keyword);
+        }
+      }
   }
 
   setEventListeners() {

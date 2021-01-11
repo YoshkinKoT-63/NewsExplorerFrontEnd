@@ -1,7 +1,8 @@
 export default class NewsCard {
-  constructor(card, mainApi){
+  constructor(card, mainApi, formatDate){
     this.card = card;
     this.mainApi = mainApi;
+    this.formatDate = formatDate;
     this.saveCard = this.saveCard.bind(this);
   }
 
@@ -81,7 +82,7 @@ export default class NewsCard {
       this._element.querySelector('.card__keyword').textContent = keyword.toLowerCase();
     }
 
-    this._element.querySelector('.card__date').textContent = data.publishedAt;
+    this._element.querySelector('.card__date').textContent = this.formatDate(data.publishedAt);
     this._element.querySelector('.card__tittle').textContent = data.title;
     this._element.querySelector('.card__text').textContent = data.description;
     this._element.querySelector('.card__source').textContent = data.source.name;
