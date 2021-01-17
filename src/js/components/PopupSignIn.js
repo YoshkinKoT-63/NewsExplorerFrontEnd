@@ -23,7 +23,6 @@ export default class PopupSignIn extends Popup {
       window.localStorage.setItem("jwt", logInfo.token);
         this.mainApi.getUserData()
         .then((userData) => {
-          console.log(userData);
           window.localStorage.setItem("name", userData.name);
           location.reload();
         })
@@ -45,5 +44,9 @@ export default class PopupSignIn extends Popup {
     this.buttonPopupSignInAfterSucces.addEventListener('click', () => this.open()); //открытие из попапа успешной регистрации
     this.signUpButtom.addEventListener('click', () => this.close());//закрыть попап перед открытием попапа регистрации
     this.popupForm.addEventListener('submit', this.submit);
+    if(!window.localStorage.getItem("jwt")){
+    this.buttonAuth = document.querySelector('.header__auth');
+    this.buttonAuth.addEventListener('click', () => this.open());//открытие по кнопке из шапки
+    }
   };
 }

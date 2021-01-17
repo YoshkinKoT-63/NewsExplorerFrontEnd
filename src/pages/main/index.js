@@ -1,9 +1,11 @@
 import "./index.css";
 
+const PAGE_NAME = 'main';
+
 //импорт констант
 
 import { ERROR_MESSAGES, SERVER_CONFIG, NEWS_API_CONFIG } from '../../js/constants/data.js'
-import { HEADER_CONTAINER, NAV_AUTH_TEMPLATE, NAV_UNAUTH_TEMPLATE } from '../../js/constants/header.js';
+import { HEADER_CONTAINER, NAV_AUTH_TEMPLATE, NAV_UNAUTH_TEMPLATE, NAV_SAVED_ARTICLES } from '../../js/constants/header.js';
 import { popupSignInContainer, buttonPopupAuth } from '../../js/constants/popupSignIn.js';
 import { popupSignUpContainer, buttonReg } from '../../js/constants/popupSignUp.js';
 import { popupSuccesContainer, popupButtonSignInAfterSucces } from '../../js/constants/popupSucces.js';
@@ -43,7 +45,7 @@ const popupSucces = new PopupSucces(popupSuccesContainer); // попап усп�
 
 const popupSignUp = new PopupSignIUp(popupSignUpContainer, buttonReg, popupSucces, mainApi, validationSignUp); // попап регистрации
 
-const header = new Header(HEADER_CONTAINER, popupSignIn, NAV_AUTH_TEMPLATE, NAV_UNAUTH_TEMPLATE);
+const header = new Header(HEADER_CONTAINER, NAV_AUTH_TEMPLATE, NAV_UNAUTH_TEMPLATE, NAV_SAVED_ARTICLES, PAGE_NAME);
 
 const newsCard = new NewsCard(CARD, mainApi, formatDate);
 
