@@ -78,7 +78,7 @@ export default class MainApi {
       .then((res) => this._getResponseData(res));
   }
 
-//сохранение карточки статьи-----------------------------------------------------------------------
+//удаление карточки статьи-----------------------------------------------------------------------
   deleteArticle(data) {
     this._option.headers['Authorization'] = `Bearer ${localStorage.getItem('jwt')}`;
     return fetch(`${this._option.url}/articles/${data.id}`, {
@@ -92,7 +92,16 @@ export default class MainApi {
   }
 //--------------------------------------------------------------------------------------------------------
 
-
+//получить сохранённые статьи
+getArticles() {
+  this._option.headers['Authorization'] = `Bearer ${localStorage.getItem('jwt')}`;
+  return fetch(`${this._option.url}/articles`, {
+    credentials: "include",
+    method: "GET",
+    headers: this._option.headers,
+  })
+  .then((res) => this._getResponseData(res));
+}
 
 
 
