@@ -12,8 +12,8 @@ export default class NewsCardList {
   }
 
 //запрос создания карточки и добавление ее в результыты поиска
-  addCard(newsData, keyword) {
-    this.cardList.appendChild(this.newCard.create(newsData, keyword));
+  addCard(newsData, keyword, id) {
+    this.cardList.appendChild(this.newCard.create(newsData, keyword, id));
   };
 
 //установить ключевое слово
@@ -37,13 +37,21 @@ export default class NewsCardList {
     }
   }
 
+  renderSaveCard(data) {
+    this.cards = data.articles;
+    console.log(this.cards);
+    this.cards.forEach(card => this.addCard(card, card.keyword, card._id));
+    this.number = this.cards.length;
+  }
+
+
 // рендер карточек из поиска
   renderResult(data) {
     this.cards = data.articles;
     console.log(this.cards);
     this.number = (this.cards.length < 3) ? this.cards.length : 3;
     for (this.counter = 0; this.counter < this.number; this.counter++) {
-      this.addCard(this.cards[this.counter], this.keyword);
+      this.addCard(this.cards[this.counter], this.keyword, 0);
     }
     this.toggleShowMoreButton();
   }
@@ -53,13 +61,13 @@ export default class NewsCardList {
     if (this.cards.length - this.counter < 3) {
       // this.counter = this.cards.length;
       for (let i = this.counter; i < this.cards.length; i++) {
-        this.addCard(this.cards[i], this.keyword);
+        this.addCard(this.cards[i], this.keyword, 0);
         }
         this.counter = this.cards.length;
       } else {
         this.counter += 3;
         for (let i = this.counter - 3; i < this.counter; i++) {
-          this.addCard(this.cards[i], this.keyword);
+          this.addCard(this.cards[i], this.keyword, 0);
         }
       }
   }
