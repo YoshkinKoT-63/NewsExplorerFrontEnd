@@ -1,12 +1,16 @@
+import cutText from '../utils/cutText.js';
+import formatDate from '../utils/formatDate.js';
+
 export default class NewsCard {
-  constructor(card, mainApi, formatDate){
+  constructor(card, mainApi, PAGE_NAME){
     this.card = card;
     this.mainApi = mainApi;
     this.formatDate = formatDate;
+    this.cutText = cutText;
     this.saveCard = this.saveCard.bind(this);
     this.deleteCard = this.deleteCard.bind(this);
+    this.pageName = PAGE_NAME;
   }
-
 
 //сохраниь статью
   saveCard(event) {
@@ -16,7 +20,7 @@ export default class NewsCard {
     if (!event.target.classList.contains('card__button_added')) {
 //достать информацию из карточки
       const keyword = card.querySelector('.card__keyword').textContent;
-      const title = card.querySelector('.card__tittle').textContent.slice(0, 30);
+      const title = this.cutText(card.querySelector('.card__tittle').textContent);
       const text = card.querySelector('.card__text').textContent;
       const date = card.querySelector('.card__date').textContent;
       const source = card.querySelector('.card__source').textContent;
@@ -46,7 +50,6 @@ export default class NewsCard {
 
 //достать id из карточки
       const id = event.target.parentNode.id;
-      console.log(id);
       this.mainApi.deleteArticle({id})
       .then(values => {
         //закрасить прозрачным цветом
@@ -109,7 +112,7 @@ export default class NewsCard {
           this.button.addEventListener("click", this.deleteCard);
         }
     }
-    this._element.querySelector('.card__date').textContent = this.formatDate(data.publishedAt);
+    this._element.querySelector('.card__date').textContent = (this.pageName === 'main' ? this.formatDate(data.publishedAt) : data.publishedAt);
     this._element.querySelector('.card__tittle').textContent = data.title;
     this._element.querySelector('.card__text').textContent = data.description;
     this._element.querySelector('.card__source').textContent = data.source.name;

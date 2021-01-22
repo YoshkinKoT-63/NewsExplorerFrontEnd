@@ -1,5 +1,7 @@
+import ucFirst from '../../js/utils/ucFirst';
+
 export default class Report {
-  constructor(REPORT_CONTAINER, mainApi, ucFirst) {
+  constructor(REPORT_CONTAINER, mainApi) {
     this.mainApi = mainApi;
     this.articles = [];
     this.sortedArticles = [];

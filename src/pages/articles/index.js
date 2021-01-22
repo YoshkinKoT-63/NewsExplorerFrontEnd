@@ -23,8 +23,7 @@ import NewsCard from '../../js/components/NewsCard.js';
 import Report from '../../js/components/Report.js';
 
 // импорт утилит
-import formatDate from '../../js/utils/formatDate.js';
-import ucFirst from '../../js/utils/ucFirst';
+
 import shuffle from '../../js/utils/shuffle.js';
 
 // инициализация классов
@@ -33,9 +32,9 @@ const mainApi = new MainApi(SERVER_CONFIG); // апи регистрации/л�
 
 const header = new Header(HEADER_CONTAINER, NAV_AUTH_TEMPLATE, NAV_UNAUTH_TEMPLATE, NAV_SAVED_ARTICLES, PAGE_NAME);
 
-const report = new Report(REPORT_CONTAINER, mainApi, ucFirst); // отчёт о сохранённых статьях
+const report = new Report(REPORT_CONTAINER, mainApi); // отчёт о сохранённых статьях
 
-const newsCard = new NewsCard(CARD, mainApi, formatDate);
+const newsCard = new NewsCard(CARD, mainApi, PAGE_NAME);
 
 const newsCardList = new NewsCardList(CARD_LIST, SHOW_MORE_BUTTON, newsCard);
 
