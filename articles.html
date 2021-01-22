@@ -4,25 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NewsExplorer | Сохранённые статьи</title>
-  <link rel="stylesheet" href="./articles/articles.3a7f7c32b275548dbdc3.css">
+  <link rel="stylesheet" href="./articles/articles.b72a2c393ed8391ba6d5.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png" />
 </head>
 
 <body class="news-explorer">
   <div class="page">
 
+    <template id="saved-articles-template">
+      <nav class="header__nav-container">
+        <ul class="header__nav-links">
+          <li><a href="../index.html" class="header__main header__nav-link">Главная</a></li>
+          <li><a href="#" class="header__nav-link  header__nav-link_underline">Сохранённые статьи</a></li>
+          <li><button class="header__sign-up header__auth header__nav-link header__nav-link_button header_hide">Авторизоваться</button></li>
+          <li><button class="header__logout header__logout_white header__nav-link header__nav-link_button header__nav-link_white"></button></li>
+        </ul>
+        <button class="header__button header__button_white"></button>
+      </nav>
+    </template>
+
     <header class="header">
       <div class="header__container header__container_white">
-      <a href="../index.html" class="header__logo header__logo_white" title="главная страница">NewsExplorer</a>
-        <nav class="header__nav-container">
-          <ul class="header__nav-links">
-            <li><a href="../index.html" class="header__main header__nav-link">Главная</a></li>
-            <li><a href="#" class="header__nav-link  header__nav-link_underline">Сохранённые статьи</a></li>
-            <li><button class="header__sign-up header__auth header__nav-link header__nav-link_button header__nav-link_white header_hide">Авторизоваться</button></li>
-            <li><button class="header__logout header__logout_white header__nav-link header__nav-link_button header__nav-link_white"></button></li>
-          </ul>
-          <button class="header__button header__button_white"></button>
-        </nav>
+      <a href="../index.html" class="header__logo header__logo_black" title="главная страница">NewsExplorer</a>
       </div>
     </header>
 
@@ -31,88 +34,14 @@
       <section class="report">
         <div class="report__container">
           <h1 class="report__title">Сохранённые статьи</h1>
-          <p class="report__sum">
-            Александр, у вас 5 сохранённых статей
-          </p>
+          <p class="report__sum"></p>
           <p class="report__keywords">
-            По ключевым словам:
-            <strong class="report__keyword">Природа</strong>,
-            <strong class="report__keyword">Тайга</strong> и
-            <strong class="report__keyword">2 другим</strong>
           </p>
         </div>
       </section>
 
       <section class="result">
-        <div class="result__cards-container">
-          <div class="card">
-            <p class="card__keyword">Природа</p>
-            <p class="card__notice card__notice_is-opened">Убрать из сохранённых</p>
-            <button class="card__button card__button_delete"></button>
-            <img src="./images/image_06.png" alt="фикус" class="card__image">
-            <div class="card__article-container">
-              <div class="card__date">2 августа, 2019</div>
-              <h3 class="card__tittle">Национальное достояние – парки</h3>
-              <p class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-              <p class="card__source">Дзен</p>
-            </div>
-          </div>
-          <div class="card">
-            <p class="card__keyword">Природа</p>
-            <p class="card__notice">Убрать из сохранённых</p>
-            <button class="card__button card__button_delete"></button>
-            <img src="./images/image_01.png" alt="аэросъемка ландшафта" class="card__image">
-            <div class="card__article-container">
-              <div class="card__date">2 августа, 2019</div>
-              <h3 class="card__tittle">Лесные огоньки: история одной фотографии</h3>
-              <p class="card__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного
-                из местных чудес природы.</p>
-              <p class="card__source">Афиша</p>
-            </div>
-          </div>
-
-          <div class="card">
-            <p class="card__keyword">Тайга</p>
-            <p class="card__notice">Убрать из сохранённых</p>
-            <button class="card__button card__button_delete"></button>
-            <img src="./images/image_05.png" alt="листок в колбе" class="card__image">
-            <div class="card__article-container">
-              <div class="card__date">2 августа, 2019</div>
-              <h3 class="card__tittle">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
-              <p class="card__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
-              <p class="card__source">Медиазона</p>
-            </div>
-          </div>
-
-          <div class="card">
-            <p class="card__keyword">Парки</p>
-            <p class="card__notice">Убрать из сохранённых</p>
-            <button class="card__button card__button_delete"></button>
-            <img src="./images/image_06.png" alt="фикус" class="card__image">
-            <div class="card__article-container">
-              <div class="card__date">2 августа, 2019</div>
-              <h3 class="card__tittle">Национальное достояние – парки</h3>
-              <p class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-              <p class="card__source">Дзен</p>
-            </div>
-          </div>
-
-          <div class="card">
-            <p class="card__keyword">Фотография</p>
-            <p class="card__notice">Убрать из сохранённых</p>
-            <button class="card__button card__button_delete"></button>
-            <img src="./images/image_01.png" alt="аэросъемка ландшафта" class="card__image">
-            <div class="card__article-container">
-              <div class="card__date">2 августа, 2019</div>
-              <h3 class="card__tittle">Лесные огоньки: история одной фотографии</h3>
-              <p class="card__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного
-                из местных чудес природы.</p>
-              <p class="card__source">Афиша</p>
-            </div>
-          </div>
-
-        </div>
-
+        <div class="result__cards-container"></div>
       </section>
     </main>
 
@@ -134,6 +63,21 @@
 
   </div>
 
-  <script src="articles/articles.1c045fe7dc8a08364491.js"></script>
+  <template id="card">
+    <a class="card" target="_blank">
+      <p class="card__keyword card__keyword_hide"></p>
+      <button class="card__button card__button_delete"></button>
+      <p class="card__notice card__notice_is-opened">Войдите чтобы сохранять статьи</p>
+      <img src="./images/no-image.png" alt="" class="card__image">
+      <div class="card__article-container">
+        <div class="card__date"></div>
+        <h3 class="card__tittle"></h3>
+        <p class="card__text"></p>
+        <p class="card__source"></p>
+      </div>
+    </a>
+  </template>
+
+  <script src="articles/articles.d8aada9342ea8317d655.js"></script>
 </body>
 </html>
