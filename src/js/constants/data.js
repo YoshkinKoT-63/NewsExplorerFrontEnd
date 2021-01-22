@@ -1,4 +1,4 @@
-const SERVER_URL = 'http://localhost:3000';
+const SERVER_URL = 'https://api.newsxplorer.ru';
 
 const ERROR_MESSAGES = {
   empty: 'Это обязательное поле',
