@@ -1,3 +1,3 @@
-.header__button_dark::before {
+.header__button.header__button_dark::before {
   content: url(../../../../images/menu_dark.svg);
 }

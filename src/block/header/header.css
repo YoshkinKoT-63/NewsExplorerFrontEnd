@@ -15,6 +15,7 @@
 @import url(./__container/_white/header__container_white.css);
 @import url(./__nav-link/_white/header__nav-link_white.css);
 @import url(./__logo/_white/header__logo_white.css);
+@import url(./__logo/_black/header__logo_black.css);
 @import url(./__logout/_white/header__logout_white.css);
 @import url(./__logout/_dark/header__logout_dark.css);
 @import url(./__button/_dark/header__button_dark.css);

@@ -9,6 +9,8 @@ export default class PopupSucces extends Popup {
 
   setEventListeners() {
     super.setEventListeners();
-    this.signInButtom.addEventListener('click', () => this.close());//закрыть попап перед открытием попапа логина
+    this._setHandlers([
+      [this.signInButtom, 'click', () => this.close()],//закрыть попап перед открытием попапа логина
+    ]);
   };
 }

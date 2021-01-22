@@ -1,5 +1,8 @@
-export default class NewsCardList {
+import BaseComponent from './BaseComponent';
+
+export default class NewsCardList extends BaseComponent {
   constructor(cardList, showMoreButton, newCard) {
+    super();
     this.cardList = cardList;
     this.showMoreButton = showMoreButton;
     this.newCard = newCard;
@@ -39,16 +42,13 @@ export default class NewsCardList {
 
   renderSaveCard(data) {
     this.cards = data.articles;
-    console.log(this.cards);
     this.cards.forEach(card => this.addCard(card, card.keyword, card._id));
     this.number = this.cards.length;
   }
 
-
 // рендер карточек из поиска
   renderResult(data) {
     this.cards = data.articles;
-    console.log(this.cards);
     this.number = (this.cards.length < 3) ? this.cards.length : 3;
     for (this.counter = 0; this.counter < this.number; this.counter++) {
       this.addCard(this.cards[this.counter], this.keyword, 0);
@@ -73,8 +73,9 @@ export default class NewsCardList {
   }
 
   setEventListeners() {
-    this.showMoreButton.addEventListener("click", this.showMore);
-    this.showMoreButton.addEventListener("click", this.toggleShowMoreButton);
+    this._setHandlers([
+      [this.showMoreButton, 'click', this.showMore],
+      [this.showMoreButton, 'click', this.toggleShowMoreButton],
+    ]);
   }
-
 }

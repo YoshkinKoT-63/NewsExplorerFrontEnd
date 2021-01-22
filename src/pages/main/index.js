@@ -54,9 +54,6 @@ const newsCardList = new NewsCardList(CARD_LIST, SHOW_MORE_BUTTON, newsCard);
 const search = new Search(SEARCH_INPUT, SEARCH_BUTTON, PRELOADER, RESULT, NO_RESULT, newsApi, newsCardList);
 
 
-
-
-
 header.render();
 
 search.setEventListeners();
@@ -69,4 +66,3 @@ popupSucces.setEventListeners();
 
 validationSignIn.setEventListeners();
 validationSignUp.setEventListeners();
-

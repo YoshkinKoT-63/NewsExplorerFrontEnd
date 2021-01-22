@@ -40,13 +40,21 @@ export default class PopupSignIn extends Popup {
 
   setEventListeners() {
     super.setEventListeners();
-    this.buttonPopupAuth.addEventListener('click', () => this.open());//открытие из попапа регистрации
-    this.buttonPopupSignInAfterSucces.addEventListener('click', () => this.open()); //открытие из попапа успешной регистрации
-    this.signUpButtom.addEventListener('click', () => this.close());//закрыть попап перед открытием попапа регистрации
-    this.popupForm.addEventListener('submit', this.submit);
+    this._setHandlers([
+      [this.buttonPopupAuth, 'click', () => this.open()],//открытие из попапа регистрации
+      [this.buttonPopupSignInAfterSucces, 'click', () => this.open()],//открытие из попапа успешной регистрации
+      [this.buttonPopupAuth, 'click', this.validation.resetValidationErrors],
+      [this.buttonPopupSignInAfterSucces, 'click', this.validation.resetValidationErrors],
+      [this.signUpButtom, 'click', () => this.close()],//закрыть попап перед открытием попапа регистрации
+      [this.popupForm, 'submit', this.submit],
+    ])
     if(!window.localStorage.getItem("jwt")){
-    this.buttonAuth = document.querySelector('.header__auth');
-    this.buttonAuth.addEventListener('click', () => this.open());//открытие по кнопке из шапки
+      this.buttonAuth = document.querySelector('.header__auth');
+      this._setHandlers([
+        [this.buttonAuth, 'click', () => this.open()],//открытие по кнопке из шапки
+        [this.buttonAuth, 'click', this.validation.resetValidationErrors],
+      ])
+
     }
   };
 }

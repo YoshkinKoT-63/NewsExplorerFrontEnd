@@ -11,6 +11,10 @@
   cursor: pointer;
 }
 
+.header__button::before {
+  content: url(../../../images/menu_dark.svg);
+}
+
 @media (max-width: 800px) {
 	.header__button {
     display: inline;

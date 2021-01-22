@@ -87,10 +87,4 @@ export default class FormValidator extends BaseComponent {
   setEventListeners() {
     this.form.addEventListener('input', this.inputHandler, true);
   };
-
-  // setEventListeners() {
-  //   this._setHandlers([
-  //     [this.form, 'input', () => {this.inputHandler()}],
-  //   ]);
-  // }
 }

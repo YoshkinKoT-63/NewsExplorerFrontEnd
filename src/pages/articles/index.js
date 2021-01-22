@@ -5,14 +5,14 @@ if(!window.localStorage.getItem("jwt")) {
 };
 
 const PAGE_NAME = 'saved_articles';
+const articles = [];
 
 //импорт констант
 
-import { ERROR_MESSAGES, SERVER_CONFIG, NEWS_API_CONFIG } from '../../js/constants/data.js'
+import { SERVER_CONFIG } from '../../js/constants/data.js'
 import { HEADER_CONTAINER, NAV_AUTH_TEMPLATE, NAV_UNAUTH_TEMPLATE, NAV_SAVED_ARTICLES } from '../../js/constants/header.js';
 import { CARD, CARD_LIST, SHOW_MORE_BUTTON } from '../../js/constants/card.js';
 import { REPORT_CONTAINER } from '../../js/constants/report.js';
-
 
 //импорт компонентов
 
@@ -25,6 +25,7 @@ import Report from '../../js/components/Report.js';
 // импорт утилит
 import formatDate from '../../js/utils/formatDate.js';
 import ucFirst from '../../js/utils/ucFirst';
+import shuffle from '../../js/utils/shuffle.js';
 
 // инициализация классов
 
@@ -38,47 +39,23 @@ const newsCard = new NewsCard(CARD, mainApi, formatDate);
 
 const newsCardList = new NewsCardList(CARD_LIST, SHOW_MORE_BUTTON, newsCard);
 
-
-
 mainApi.getArticles()
   .then((res) => {
+
     window.localStorage.setItem("articles", JSON.stringify(res.data));
-    console.log('запрос отправлен');
+
+    header.render();
+
+    report.getSaveArticles();
+
+    report.setNumberArticles();
+
+    report.setKeywords();
+
+    report.setArticlesInfo();
+
+    shuffle(res.data, articles);
+
+    newsCardList.renderSaveCard({articles});
+
   });
-
-
-header.render();
-
-report.getSaveArticles();
-
-report.setNumberArticles();
-
-report.setKeywords();
-
-report.setArticlesInfo();
-
-console.log(JSON.parse(window.localStorage.getItem("articles")));
-
-const arr = JSON.parse(window.localStorage.getItem("articles"));
-
-
-const articles = [];
-
-arr.forEach(el => {
-  const { _id, date, image, keyword, link, source, title, text } = el;
-  articles.push( {
-    _id: _id,
-    description: text,
-    source: {name: source},
-    title: title,
-    url: link,
-    urlToImage: image,
-    publishedAt: date,
-    keyword: keyword,
-  })
-
-});
-
-console.log(articles);
-
-newsCardList.renderSaveCard({articles});

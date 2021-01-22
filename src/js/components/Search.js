@@ -21,11 +21,11 @@ export default class Search extends BaseComponent {
   }
 
   formatDate(date) {
-    console.log(date);
     return `${date.getFullYear()}-${this.leftPad(date.getMonth() + 1)}-${this.leftPad(date.getDate())}`;
   }
 
-  requestNews() {
+  requestNews(event) {
+    event.preventDefault();
     let searchValue = this.search_input.value;
     if (searchValue) {
       this.preloader.classList.remove('preloader_hide');
@@ -59,10 +59,8 @@ export default class Search extends BaseComponent {
   };
 
   setEventListeners() {
-    this.search_button.addEventListener("click", this.requestNews);
-    // this.search_button.addEventListener("click", () => this.newsCardList.clear());
+    this._setHandlers([
+      [this.search_button, 'click', this.requestNews],
+    ]);
   }
-
-
-
 }

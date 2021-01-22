@@ -11,8 +11,10 @@ export default class Popup extends BaseComponent {
 
 // Очищает форму ввода попапа
 clearPopup() {
-  console.log('сработал сброс формы')
-  this.element.querySelector('.popup__form').reset();
+  this.form = this.element.querySelector('.popup__form');
+  if (this.form) {
+    this.form.reset();
+  }
 }
 
 //открытие окна
@@ -23,7 +25,6 @@ clearPopup() {
 
 //закрытие окна
   close() {
-    console.log('Сработало закрытие попапа');
     this.element.classList.remove('popup_is-opened');
   };
 
@@ -40,5 +41,4 @@ clearPopup() {
       [window, 'keydown', this.closePopupByEscapeButton]
     ]);
   }
-
 }
