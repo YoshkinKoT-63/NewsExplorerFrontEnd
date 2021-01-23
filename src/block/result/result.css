@@ -1,6 +1,7 @@
 @import url(./__tittle/result__tittle.css);
 @import url(./__cards-container/result__cards-container.css);
 @import url(./__show-more/result__show-more.css);
+@import url(./_hide/result_hide.css);
 
 .result {
   box-sizing: border-box;

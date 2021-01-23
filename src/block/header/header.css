@@ -5,7 +5,7 @@
 @import url(./__container/header__container.css);
 @import url(./__nav-link/header__nav-link.css);
 @import url(./__nav-link/__nav-link_button/header__nav-link_button.css);
-@import url(./__login/header__login.css);
+@import url(./__logout/header__logout.css);
 @import url(./_hide/header_hide.css);
 @import url(./__button/header__button.css);
 @import url(./__nav-links/header__nav-links.css);
@@ -15,8 +15,9 @@
 @import url(./__container/_white/header__container_white.css);
 @import url(./__nav-link/_white/header__nav-link_white.css);
 @import url(./__logo/_white/header__logo_white.css);
-@import url(./__login/_white/header__login_white.css);
-@import url(./__login/_dark/header__login_dark.css);
+@import url(./__logo/_black/header__logo_black.css);
+@import url(./__logout/_white/header__logout_white.css);
+@import url(./__logout/_dark/header__logout_dark.css);
 @import url(./__button/_dark/header__button_dark.css);
 @import url(./__button/_white/header__button_white.css);
 @import url(./__nav-links/_is-opened/header__nav-links_is-opened.css);

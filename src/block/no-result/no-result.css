@@ -1,6 +1,7 @@
 @import url(./__image/no-result__image.css);
 @import url(./__tittle/no-result__tittle.css);
 @import url(./__text/no-result__text.css);
+@import url(./_hide/no-result_hide.css);
 
 .no-result {
   display: flex;

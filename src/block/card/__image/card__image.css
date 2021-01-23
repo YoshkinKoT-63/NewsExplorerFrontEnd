@@ -7,3 +7,11 @@
   width: 100%;
 }
 
+.card__image:after {
+  background-image: url('../../../images/no-image.png');
+  background-size: contain;
+  content: "";
+  display: block;
+  font-size: 12px;
+  height: 272px;
+}

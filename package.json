@@ -1,6 +1,6 @@
 {
   "name": "front_end",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Фронтенд дипломной работы Яндекс.Практикум",
   "main": "index.js",
   "scripts": {
