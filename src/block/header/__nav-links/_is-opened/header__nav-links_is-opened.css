@@ -1,0 +1,5 @@
+@media (max-width: 800px) {
+  .header__nav-links_is-opened {
+    display: flex;
+  }
+}

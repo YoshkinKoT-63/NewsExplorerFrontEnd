@@ -1,0 +1,17 @@
+.search__tittle {
+  font-size: 64px;
+  font-family: RobotoSlab, Verdana, Arial, sans-serif;
+  position: relative;
+  font-weight: normal;
+  color: white;
+  max-width: 608px;
+  margin: 0;
+}
+
+@media (max-width: 1080px) {
+  .search__tittle {
+    font-size: 36px;
+    line-height: 40px;
+    max-width: 385px;
+  }
+}

@@ -1,0 +1,30 @@
+.card__keyword {
+  box-sizing: border-box;
+  font-family: Roboto, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: #000;
+  border-radius: 10px;
+  margin: 0;
+  background-color: white;
+  padding: 8px 15px;
+  z-index: 10;
+  max-width: 111px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all .3s linear;
+  cursor: pointer;
+  position: absolute;
+  left: 24px;
+  top: 24px;
+}
+
+@media (max-width: 720px) {
+  .card__keyword {
+    top: 16px;
+    left: 16px;
+	}
+}

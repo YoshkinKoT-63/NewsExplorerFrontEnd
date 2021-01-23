@@ -1,0 +1,12 @@
+.popup__button_sign-up {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  display: inline;
+  text-align: center;
+  text-transform: capitalize;
+  border-radius: 50px;
+  transition: all .3s linear;
+}

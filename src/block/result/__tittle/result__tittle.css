@@ -1,0 +1,18 @@
+.result__tittle {
+  font-family: RobotoSlab, Verdana, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 46px;
+  color: #1A1B22;
+  margin: 0 auto 64px auto;
+  width: calc(100% - 208px);
+  max-width: 1232px;
+}
+
+@media (max-width: 1080px) {
+  .result__tittle {
+    margin: 0 auto 32px auto;
+    width: calc(100% - 80px);
+  }
+}

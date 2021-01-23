@@ -1,0 +1,17 @@
+.about__text {
+  font-family: Roboto, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1A1B22;
+  margin-top: 1.4em;
+  margin-bottom: 1.4em;
+}
+
+@media (max-width: 1080px) {
+  .about__text {
+    margin-top: 0.9em;
+    margin-bottom: 0.9em;
+  }
+}

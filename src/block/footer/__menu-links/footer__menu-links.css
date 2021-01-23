@@ -1,0 +1,10 @@
+.footer__menu-links {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 740px) {
+  .footer__menu-links {
+    order: 1;
+  }
+}

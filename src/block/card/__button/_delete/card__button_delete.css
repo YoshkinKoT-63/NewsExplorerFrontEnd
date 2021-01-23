@@ -1,0 +1,4 @@
+.card__button_delete::after {
+  content: url(../../../../images/basket.svg);
+  opacity: .5;
+}

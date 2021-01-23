@@ -1,0 +1,23 @@
+.header__logo {
+  color: #fff;
+  text-decoration: none;
+  font-family: RobotoSlab, Verdana, Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0;
+}
+
+@media screen and (max-width: 800px) {
+  .header__logo {
+    z-index: 100;
+  }
+}
+
+@media screen and (max-width: 542px) {
+  .header__logo {
+    font-size: 16px;
+    z-index: 100;
+  }
+}

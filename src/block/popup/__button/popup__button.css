@@ -1,0 +1,11 @@
+@import url(./_active/popup__button_active.css);
+@import url(./_inactive/popup__button_inactive.css);
+
+.popup__button {
+  width: 100%;
+  height: 64px;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  margin: 0;
+}

@@ -1,0 +1,19 @@
+.header__button {
+  display: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  outline: none;
+  user-select: none;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+	.header__button {
+    display: inline;
+    z-index: 100;
+	}
+}

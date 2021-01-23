@@ -1,0 +1,9 @@
+.card__article-container {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  height: 304px;
+  text-overflow: ellipsis;
+}

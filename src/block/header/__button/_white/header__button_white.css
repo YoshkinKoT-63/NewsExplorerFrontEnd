@@ -1,0 +1,9 @@
+.header__button_white::before {
+  content: url(../../../../images/menu_white.svg);
+}
+
+@media (max-width: 800px) {
+  .header__button_white::before {
+    content: url(../../../../images/menu_dark.svg);
+	}
+}

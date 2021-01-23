@@ -1,0 +1,5 @@
+.header__login::after {
+  position: relative;
+  top: 3px;
+  margin-left: 10px;
+}

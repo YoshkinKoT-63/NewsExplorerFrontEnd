@@ -1,0 +1,4 @@
+.header__nav-toggle {
+  opacity: 0;
+	pointer-events: none;
+}

@@ -1,0 +1,16 @@
+.about__text-container {
+  margin: 0 0 0 56px;
+  max-width: 600px;
+}
+
+@media (max-width: 1080px) {
+  .about__text-container {
+    margin: 0 0 0 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about__text-container {
+    margin: 0;
+  }
+}

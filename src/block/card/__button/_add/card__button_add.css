@@ -1,0 +1,4 @@
+.card__button_add::after {
+  content: url(../../../../images/Rectangle_8.svg);
+  opacity: .5;
+}
